@@ -1,4 +1,4 @@
-# import * from './store.graphql'
+# import * from 'store.graphql'
 
 scalar JSON
 type Book {
