@@ -1,0 +1,11 @@
+# import * from './store.graphql'
+
+scalar JSON
+type Book {
+    id: ID!
+    author: String
+}
+
+extend type Query {
+    getBook(id: ID!): Book
+}

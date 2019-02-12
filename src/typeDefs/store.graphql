@@ -1,0 +1,9 @@
+
+type Store { 
+    id: ID!
+    description: String
+}
+
+extend type Query {
+    getStore(id: ID!): Siem
+}

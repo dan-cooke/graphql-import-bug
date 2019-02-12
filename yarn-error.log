@@ -1,0 +1,63 @@
+Arguments: 
+  /usr/local/Cellar/node/11.9.0/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/local/bin:/Users/dancooke/.nimble/bin:/usr/local/opt/python@2/bin/:/Users/dancooke/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  11.9.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/dancooke/Playground/graphql-import-bug/package.json: Unexpected token } in JSON at position 945
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.13.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+      "name": "graphql-import-bug",
+      "version": "1.0.0",
+      "main": "index.js",
+      "license": "MIT",
+      "scripts": {
+        "build": "babel src --out-dir build",
+        "dev": "babel src --out-dir build && node build/index.js",
+        "lint:js:fix": "npm run lint:js --fix",
+        "lint:js": "eslint . --ignore-path .gitignore",
+        "start": "node build/index.js",
+        "test": "echo \"Error: no test specified\""
+      },
+      "dependencies": {
+        "apollo-server-express": "^2.3.2",
+        "dataloader": "^1.4.0",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "graphql": "^14.0.2",
+        "graphql-import": "0.5.2",
+        "graphql-tools": "^4.0.4",
+        "graphql-type-json": "^0.2.1",
+        "lodash": "^4.17.11",
+        "node-fetch": "^2.3.0"
+      },
+      "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-plugin-import-graphql": "^2.6.2",
+      }
+  
+    }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
